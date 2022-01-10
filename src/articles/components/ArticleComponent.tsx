@@ -1,5 +1,6 @@
 import React from "react";
 import { Article } from "../services/ArticleApi";
+import rocket from "../../assets/image-not-found.svg";
 
 function ArticleComponent({
   article,
@@ -8,6 +9,11 @@ function ArticleComponent({
   article: Article;
   right: boolean;
 }) {
+  function addDefaultSrc(event: React.SyntheticEvent<HTMLImageElement, Event>) {
+    // eslint-disable-next-line no-param-reassign
+    (event.target as HTMLImageElement).src = rocket;
+  }
+
   return (
     <div className="d-flex w-75 my-5 justify-content-center">
       <div className="w-75">
@@ -20,6 +26,7 @@ function ArticleComponent({
             float: right ? "right" : "left",
             width: "20em",
           }}
+          onError={(ev) => addDefaultSrc(ev)}
         />
 
         <div>
