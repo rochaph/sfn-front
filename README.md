@@ -2,6 +2,16 @@
 
 Space Flight News Articles Information
 
+Front que consome a sfn-api, uma API de artigos aeroespaciais
+
+Tecnologias utilizadas:
+- React
+- Sass
+- Typescript
+- Jest
+- Bootstrap
+- Commitizen
+
 #### 1. Instalando o sistema:
 
 ```bash
